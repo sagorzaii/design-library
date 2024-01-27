@@ -1,15 +1,15 @@
 
 > design-library@1.0.0 build-storybook
-> storybook build --output-dir C:\Users\tians\AppData\Local\Temp\chromatic--25224-rqfoc5D3Nphn
+> storybook build --output-dir C:\Users\tians\AppData\Local\Temp\chromatic--15772-clIn1masZavF
 
 @storybook/cli v7.6.10
 
-info => Cleaning outputDir: C:\Users\tians\AppData\Local\Temp\chromatic--25224-rqfoc5D3Nphn
+info => Cleaning outputDir: C:\Users\tians\AppData\Local\Temp\chromatic--15772-clIn1masZavF
 info => Loading presets
 info => Building manager..
-info => Manager built (204 ms)
+info => Manager built (277 ms)
 info => Building preview..
-info => Copying static files: C:\Users\tians\Documents\devsandbox\design-library\node_modules\@storybook\manager\static at C:\Users\tians\AppData\Local\Temp\chromatic--25224-rqfoc5D3Nphn\sb-common-assets
+info => Copying static files: C:\Users\tians\Documents\devsandbox\design-library\node_modules\@storybook\manager\static at C:\Users\tians\AppData\Local\Temp\chromatic--15772-clIn1masZavF\sb-common-assets
 info Using SWC compiler
 info Addon-docs: using MDX2
 info => Using implicit CSS loaders
@@ -117,13 +117,14 @@ info => Using default Webpack5 setup
 <s> [webpack.Progress] 19% building 0/1 entries 18/18 dependencies 3/18 modules
 <s> [webpack.Progress] 24% building import loader ./node_modules/@storybook/mdx2-csf/loader.js
 <s> [webpack.Progress] 24% building 0/1 entries 36/63 dependencies 7/27 modules
-<s> [webpack.Progress] 21% building import loader ./node_modules/@storybook/builder-webpack5/dist/loaders/export-order-loader.js
-<s> [webpack.Progress] 21% building import loader ./node_modules/unplugin/dist/webpack/loaders/transform.js
-<s> [webpack.Progress] 21% building 0/1 entries 73/110 dependencies 9/43 modules
+<s> [webpack.Progress] 20% building import loader ./node_modules/@storybook/builder-webpack5/dist/loaders/export-order-loader.js
+<s> [webpack.Progress] 20% building import loader ./node_modules/unplugin/dist/webpack/loaders/transform.js
+<s> [webpack.Progress] 20% building 0/1 entries 59/92 dependencies 8/41 modules
 <s> [webpack.Progress] 39% building import loader ./node_modules/style-loader/dist/cjs.js
 <s> [webpack.Progress] 39% building import loader ./node_modules/css-loader/dist/cjs.js
-<s> [webpack.Progress] 39% building 0/1 entries 230/272 dependencies 70/131 modules
-<s> [webpack.Progress] 43% building 0/1 entries 700/788 dependencies 191/311 modules
+<s> [webpack.Progress] 39% building 0/1 entries 197/227 dependencies 61/112 modules
+<s> [webpack.Progress] 35% building 0/1 entries 257/300 dependencies 70/150 modules
+<s> [webpack.Progress] 44% building 0/1 entries 700/761 dependencies 193/310 modules
 <s> [webpack.Progress] 65% building 1/1 entries 1032/1032 dependencies 412/412 modules
 <s> [webpack.Progress] 65% building
 <s> [webpack.Progress] 69% building finish
@@ -341,5 +342,5 @@ WARN
 <s> [webpack.Progress] 99% cache shutdown
 <s> [webpack.Progress] 100% 
 
-info => Preview built (9.22 s)
-info => Output directory: C:\Users\tians\AppData\Local\Temp\chromatic--25224-rqfoc5D3Nphn
+info => Preview built (11 s)
+info => Output directory: C:\Users\tians\AppData\Local\Temp\chromatic--15772-clIn1masZavF
