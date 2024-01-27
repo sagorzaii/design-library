@@ -8,32 +8,69 @@ const config: StorybookConfig = {
     "@storybook/addon-onboarding",
     "@storybook/addon-interactions",
   ],
-  // webpackFinal: async (config, { configType }) => {
-  //   // Add any custom webpack configurations here
-
-  //   // Add Babel loader for JavaScript and JSX files
-  //   (config.module || (config.module = {})).rules?.push({
-  //     test: /\.(js|jsx|ts|tsx)$/,
-  //     use: [
-  //       {
-  //         loader: require.resolve("babel-loader"),
-  //         options: {
-  //           presets: ["@babel/preset-react", "@babel/preset-env"],
-  //         },
-  //       },
-  //     ],
-  //   });
-
-  //   // Add any additional loaders, plugins, or modifications to the configuration
-
-  //   return config;
-  // },
   framework: {
     name: "@storybook/react-webpack5",
     options: {
       builder: {
         useSWC: true,
       },
+    },
+  },
+  babel: async (options) => ({
+    ...options,
+    plugins: [
+      [
+        "babel-plugin-styled-components",
+        {
+          displayName: true,
+        },
+      ],
+    ],
+  }),
+  webpackFinal: async (config, { configType }) => {
+    // `configType` has a value of 'DEVELOPMENT' or 'PRODUCTION'
+    // You can change the configuration based on that.
+    // 'PRODUCTION' is used when building the static version of storybook.
+
+    // Storybook uses its own webpack config, so we need to merge our config with it
+    // See https://storybook.js.org/docs/configurations/custom-webpack-config/
+
+    // Add typescript loader to process TS-files from other packages
+    config.module.rules.push({
+      test: /\.(ts|tsx)$/,
+      use: [
+        {
+          loader: require.resolve("babel-loader"),
+          options: {
+            presets: [
+              [
+                "@babel/preset-env",
+                {
+                  targets: {
+                    chrome: 100,
+                    safari: 15,
+                    firefox: 91,
+                  },
+                },
+              ],
+              "@babel/preset-typescript",
+              "@babel/preset-react",
+            ],
+          },
+        },
+      ],
+    });
+
+    config.resolve.extensions.push(".ts", ".tsx");
+
+    return config;
+  },
+  build: {
+    test: {
+      disabledAddons: [
+        "@storybook/addon-docs",
+        "@storybook/addon-essentials/docs",
+      ],
     },
   },
   docs: {
